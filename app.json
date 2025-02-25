@@ -27,6 +27,62 @@
       "DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED": {
         "description": "SSL is required to connect to Postgres on Heroku",
         "value": "false"
+      },
+      "NODES_EXCLUDE": {
+         "description": "Blocks access to potentially dangerous nodes",
+        "value": "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"
+      },
+      "N8N_BLOCK_ENV_ACCESS_IN_NODE": {
+        "description": "Prevents access to environment variables in nodes",
+        "value": "true"
+      },
+      "N8N_BLOCK_FILE_ACCESS_TO_N8N_FILES": {
+        "description": "Blocks access to configuration files",
+        "value": "true"
+      },
+      "N8N_PUBLIC_API_DISABLED": {
+        "description": "Disables the public API if not needed",
+        "value": "true"
+      },
+      "N8N_PUBLIC_API_SWAGGERUI_DISABLED": {
+        "description": "Disables Swagger UI for the public API",
+        "value": "true"
+      },
+      "EXECUTIONS_DATA_SAVE_ON_ERROR": {
+        "description": "Save execution data when workflows error",
+        "value": "all"
+      },
+      "EXECUTIONS_DATA_SAVE_ON_SUCCESS": {
+        "description": "Don't save execution data for successful workflows to reduce storage",
+        "value": "none"
+      },
+      "N8N_SECURITY_AUDIT_DAYS_ABANDONED_WORKFLOW": {
+        "description": "Days to consider a workflow abandoned",
+        "value": "60"
+      },
+      "N8N_LOG_LEVEL": {
+        "description": "Set logging level for security monitoring",
+        "value": "info"
+      },
+      "N8N_SECURE_COOKIE": {
+        "description": "Ensures cookies are only sent over HTTPS",
+        "value": "true"
+      },
+      "N8N_DIAGNOSTICS_ENABLED": {
+        "description": "Disable sending anonymous usage data",
+        "value": "false"
+      },
+      "N8N_HIRING_BANNER_ENABLED": {
+        "description": "Disable hiring banner",
+        "value": "false"
+      },
+      "N8N_VERSION_NOTIFICATIONS_ENABLED": {
+        "description": "Disable version update notifications",
+        "value": "false"
+      },
+      "N8N_EDITOR_BASE_URL": {
+        "description": "Set the base URL for the editor UI",
+        "value": "https://<appname>.herokuapp.com"
       }
     },
     "addons": [
